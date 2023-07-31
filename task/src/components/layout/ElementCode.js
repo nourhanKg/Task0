@@ -13,8 +13,7 @@ const ElementCode = function(props) {
                 <pre> 
                     <code>{props.code}</code>
                 </pre>
-                <Button onClick={copyCode} variant="secondary position-absolute top-0 end-0" className="bg-transparent
-                ">
+                <Button onClick={copyCode} variant="secondary" className="bg-transparent  position-absolute top-0 end-0 m-2">
                     {isCodeCopied ?<i className="bi bi-clipboard-check"></i> : <i className="bi bi-clipboard"></i>}
                 </Button>             
             </Col>
