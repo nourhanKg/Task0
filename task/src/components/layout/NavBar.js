@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 function NavigatinBar() {
   return (
-    <Navbar expand="lg" className='bg-dark'>
+    <Navbar expand="lg" className='bg-main' data-bs-theme="dark">
       <Container fluid className='px-4'>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -1,0 +1,23 @@
+//Custom Colors
+$main: #2437ad;
+$sec: #a6e51c;
+$terinary: #f117b4;
+
+//Custom theme
+$custom-theme-colors: (
+    "main": $main,
+    "sec": $sec,
+    "terinary": $terinary
+);
+@import "../../node_modules//bootstrap/scss/functions";
+@import "../../node_modules//bootstrap/scss/variables";
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors );
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// .btn:hover, .btn:focus, .btn:active {
+//     background-color: white;
+//     color: var(--#{$prefix}btn-border-color);
+// }
