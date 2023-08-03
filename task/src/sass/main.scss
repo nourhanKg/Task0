@@ -3,21 +3,50 @@ $main: #2437ad;
 $sec: #a6e51c;
 $terinary: #f117b4;
 
+
+// $main-text-emphasis:      shade-color($main, 60%) !default;
+// $sec-text-emphasis:   shade-color($sec, 60%) !default;
+// $terinary-text-emphasis:    shade-color($terinary, 60%) !default;
+
+
+@import "../../node_modules//bootstrap/scss/functions";
+@import "../../node_modules//bootstrap/scss/variables";
+
 //Custom theme
 $custom-theme-colors: (
     "main": $main,
     "sec": $sec,
     "terinary": $terinary
 );
-@import "../../node_modules//bootstrap/scss/functions";
-@import "../../node_modules//bootstrap/scss/variables";
 
-$theme-colors: map-merge($custom-theme-colors, $theme-colors );
-
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+$table-variants: map-merge($custom-theme-colors, $table-variants);
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// .btn:hover, .btn:focus, .btn:active {
-//     background-color: white;
-//     color: var(--#{$prefix}btn-border-color);
-// }
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+      @if $color == "light" {
+        @include button-variant(
+          $value,
+          $value,
+          $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+          $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+          $active-background: shade-color($value, $btn-active-bg-shade-amount),
+          $active-border: shade-color($value, $btn-active-border-shade-amount)
+        );
+      } @else if $color == "dark" {
+        @include button-variant(
+          $value,
+          $value,
+          $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+          $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+          $active-background: tint-color($value, $btn-active-bg-tint-amount),
+          $active-border: tint-color($value, $btn-active-border-tint-amount)
+        );
+      } @else {
+        --#{$prefix}btn-hover-color: $value;
+        --#{$prefix}btn-hover-bg: #ffffff;
+      }
+    }
+  }
