@@ -17,7 +17,7 @@ const BasicCard = function () {
   `;
   return (
     <>
-      <ElementCard>
+      <ElementCard name="Basic Card">
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"

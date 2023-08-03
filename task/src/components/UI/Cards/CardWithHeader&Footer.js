@@ -17,7 +17,7 @@ const CardWithHeaderFooter = function () {
     `;
   return (
     <>
-      <ElementCard>
+      <ElementCard name="Card with Header & Footer">
         <Card className="text-center">
           <Card.Header>Featured</Card.Header>
           <Card.Body>

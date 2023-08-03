@@ -7,6 +7,7 @@ import StrippedTable from "../UI/Tables/StrippedTable";
 import ColoredTable from "../UI/Tables/ColoredTable";
 import BasicCard from "../UI/Cards/BasicCard";
 import CardWithHeaderFooter from "../UI/Cards/CardWithHeader&Footer";
+import ColoredCards from "../UI/Cards/ColoredCards";
 const UIElements = function () {
   return (
     <Container>
@@ -18,6 +19,7 @@ const UIElements = function () {
       <ColoredTable />
       <BasicCard />
       <CardWithHeaderFooter />
+      <ColoredCards />
     </Container>
   );
 };

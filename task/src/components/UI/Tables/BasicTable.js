@@ -1,5 +1,6 @@
 import { Table } from "react-bootstrap";
 import ElementCard from "../../layout/ElementCard";
+import ElementCode from "../../layout/ElementCode";
 const BasicTable = function () {
   const code = `
   <Table bordered hover>
@@ -154,6 +155,7 @@ const BasicTable = function () {
           </tbody>
         </Table>
       </ElementCard>
+      <ElementCode code={code}></ElementCode>
     </>
   );
 };
