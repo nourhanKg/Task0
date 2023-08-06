@@ -3,14 +3,21 @@ $main: #2437ad;
 $sec: #a6e51c;
 $terinary: #f117b4;
 
-
-// $main-text-emphasis:      shade-color($main, 60%) !default;
-// $sec-text-emphasis:   shade-color($sec, 60%) !default;
-// $terinary-text-emphasis:    shade-color($terinary, 60%) !default;
-
-
 @import "../../node_modules//bootstrap/scss/functions";
 @import "../../node_modules//bootstrap/scss/variables";
+
+$main-text-emphasis:      shade-color($main, 60%);
+$sec-text-emphasis:   shade-color($sec, 60%);
+$terinary-text-emphasis:    shade-color($terinary, 60%);
+
+
+// $main-bg-subtle:     tint-color($main, 80%) !default;
+$sec-bg-subtle:     tint-color($sec, 80%) !default;
+$terinary-bg-subtle:       tint-color($terinary, 80%) !default;
+
+$main-border-subtle:   tint-color($main, 60%) !default;
+$sec-border-subtle: tint-color($sec, 60%) !default;
+$terinary-border-subtle:   tint-color($terinary, 60%) !default;
 
 //Custom theme
 $custom-theme-colors: (
@@ -19,11 +26,13 @@ $custom-theme-colors: (
     "terinary": $terinary
 );
 
+//adding my themes to bootstrap
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 $table-variants: map-merge($custom-theme-colors, $table-variants);
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+//color-variant classes for btn
 @each $color, $value in $theme-colors {
     .btn-#{$color} {
       @if $color == "light" {
@@ -50,3 +59,10 @@ $table-variants: map-merge($custom-theme-colors, $table-variants);
       }
     }
   }
+  .image-crousel {
+    height: 600px;
+    width: 100%;
+  }
+  // h2 {
+  //   color:  $terinary-bg-subtle;
+  // }

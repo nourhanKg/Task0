@@ -12372,4 +12372,9 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #212529;
   --bs-btn-disabled-border-color: #212529;
+}
+
+.image-crousel {
+  height: 600px;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

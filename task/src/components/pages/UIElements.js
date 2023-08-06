@@ -8,6 +8,10 @@ import ColoredTable from "../UI/Tables/ColoredTable";
 import BasicCard from "../UI/Cards/BasicCard";
 import CardWithHeaderFooter from "../UI/Cards/CardWithHeader&Footer";
 import ColoredCards from "../UI/Cards/ColoredCards";
+import AccordionElement from "../UI/Accordion/Accordion";
+import CarouselElement from "../UI/Carousel.js/CarouselElement";
+import TabElement from "../UI/Tabs/TabElement";
+import ScrollingTabs from "../UI/Tabs/ScrollingTabs";
 const UIElements = function () {
   return (
     <Container>
@@ -20,6 +24,10 @@ const UIElements = function () {
       <BasicCard />
       <CardWithHeaderFooter />
       <ColoredCards />
+      <AccordionElement />
+      <CarouselElement />
+      <TabElement />
+      {/* <ScrollingTabs /> */}
     </Container>
   );
 };
