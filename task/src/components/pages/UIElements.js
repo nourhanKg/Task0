@@ -27,7 +27,7 @@ const UIElements = function () {
       <AccordionElement />
       <CarouselElement />
       <TabElement />
-      {/* <ScrollingTabs /> */}
+      <ScrollingTabs />
     </Container>
   );
 };
