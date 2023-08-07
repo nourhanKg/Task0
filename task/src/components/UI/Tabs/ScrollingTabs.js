@@ -5,6 +5,23 @@ const ScrollingTabs = function () {
   const tabMenuRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [isDragging, setIsDragging] = useState(false);
+  function dragTabBar(e) {
+    if (!isDragging) return;
+    const tabMenu = tabMenuRef.current;
+    const maxScrollValue = tabMenu.scrollWidth - tabMenu.clientWidth;
+    tabMenu.scrollLeft -= e.movementX;
+    if (tabMenu.scrollLeft <= 0) {
+      setShowLeftArrow(false);
+    } else {
+      setShowLeftArrow(true);
+    }
+    if (tabMenu.scrollLeft >= maxScrollValue) {
+      setShowRightArrow(false);
+    } else {
+      setShowRightArrow(true);
+    }
+  }
   function moveToEnd() {
     const tabMenu = tabMenuRef.current;
     const scrollAmount = tabMenu.clientWidth;
@@ -54,6 +71,9 @@ const ScrollingTabs = function () {
     id="tab-menu"
     className="px-4 list-unstyled d-flex justify-content-start align-items-center my-0 w-100 mx-3 overflow-hidden"
     ref={tabMenuRef}
+    onMouseDown={() => setIsDragging(true)}
+    onMouseUp={() => setIsDragging(false)}
+    onMouseMove={dragTabBar}
     >
     <li
         className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
@@ -180,6 +200,9 @@ const ScrollingTabs = function () {
             id="tab-menu"
             className="px-4 list-unstyled d-flex justify-content-start align-items-center my-0 w-100 mx-3 overflow-hidden"
             ref={tabMenuRef}
+            onMouseDown={() => setIsDragging(true)}
+            onMouseUp={() => setIsDragging(false)}
+            onMouseMove={dragTabBar}
           >
             <li
               className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
