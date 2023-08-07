@@ -3,155 +3,162 @@ import ElementCode from "../../layout/ElementCode";
 import { useRef, useState } from "react";
 const ScrollingTabs = function () {
   const tabMenuRef = useRef(null);
-  //   const [showLeftArrow, setShowLeftArrow] = useState(false);
-  //   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
   function moveToEnd() {
     const tabMenu = tabMenuRef.current;
     const scrollAmount = tabMenu.clientWidth;
-    // const availableLeftScroll = tabMenu.scrollLeft;
+    const maxScrollValue = tabMenu.scrollWidth - tabMenu.clientWidth;
     tabMenu.scrollBy({
       left: scrollAmount,
       behavior: "smooth",
     });
-    // setShowLeftArrow(true);
-    // availableLeftScroll === 0 && setShowRightArrow(false);
+    setShowLeftArrow(true);
+    setTimeout(() => {
+      if (tabMenu.scrollLeft >= maxScrollValue) {
+        setShowRightArrow(false);
+      }
+    }, 500);
   }
   function moveToStart() {
     const tabMenu = tabMenuRef.current;
-    // const availableRightScroll = tabMenu.scrollRight;
     const scrollAmount = tabMenu.clientWidth;
     tabMenu.scrollBy({
       left: -scrollAmount,
       behavior: "smooth",
     });
-    // setShowRightArrow(true);
-    // availableRightScroll === 0 && setShowLeftArrow(false);
+    setShowRightArrow(true);
+    tabMenu.scrollLeft < scrollAmount && setShowLeftArrow(false);
   }
   const code = `
   <div className="text-light d-flex  align-items-center position-relative">
-  <button
-    id="left-btn"
-    className="position-absolute top-50 start-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
-    onClick={moveToStart}
-  >
-    <i className="bi bi-chevron-left"></i>
-  </button>
-  <button
-    id="right-btn"
-    className="position-absolute top-50 end-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
-    onClick={moveToEnd}
-  >
-    <i className="bi bi-chevron-right"></i>
-  </button>
-  <ul
+    {showLeftArrow && (
+    <button
+        id="left-btn"
+        className="position-absolute top-50 start-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
+        onClick={moveToStart}
+    >
+        <i className="bi bi-chevron-left"></i>
+    </button>
+    )}
+    {showRightArrow && (
+    <button
+        id="right-btn"
+        className="position-absolute top-50 end-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
+        onClick={moveToEnd}
+    >
+        <i className="bi bi-chevron-right"></i>
+    </button>
+    )}
+    <ul
     id="tab-menu"
     className="px-4 list-unstyled d-flex justify-content-start align-items-center my-0 w-100 mx-3 overflow-hidden"
     ref={tabMenuRef}
-  >
-    <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+    <li
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
+    >
+        <a className="text-light text-decoration-none" href="#">
         Link1
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link2
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link3
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link4
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link5
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link6
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link7
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link8
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link9
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link10
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link11
-      </a>
+        </a>
     </li>
     <li
-      className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
-      style={{ width: "10rem" }}
+        className="rounded-pill bg-main px-3 py-2 me-4 text-light text-center"
+        style={{ width: "10rem" }}
     >
-      <a className="text-light text-decoration-none" href="#">
+        <a className="text-light text-decoration-none" href="#">
         Link12
-      </a>
+        </a>
     </li>
-  </ul>
+    </ul>
 </div>
   `;
   return (
     <>
       <ElementCard name="Scrolling Tabs">
         <div className="text-light d-flex  align-items-center position-relative">
-          {/* {showLeftArrow && (
+          {showLeftArrow && (
             <button
               id="left-btn"
               className="position-absolute top-50 start-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
@@ -168,21 +175,7 @@ const ScrollingTabs = function () {
             >
               <i className="bi bi-chevron-right"></i>
             </button>
-          )} */}
-          <button
-            id="left-btn"
-            className="position-absolute top-50 start-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
-            onClick={moveToStart}
-          >
-            <i className="bi bi-chevron-left"></i>
-          </button>
-          <button
-            id="right-btn"
-            className="position-absolute top-50 end-0 translate-middle-y rounded-circle border-0 bg-light fs-4 fw-bold"
-            onClick={moveToEnd}
-          >
-            <i className="bi bi-chevron-right"></i>
-          </button>
+          )}
           <ul
             id="tab-menu"
             className="px-4 list-unstyled d-flex justify-content-start align-items-center my-0 w-100 mx-3 overflow-hidden"
