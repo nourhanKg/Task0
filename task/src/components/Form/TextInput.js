@@ -5,7 +5,7 @@ const TextInput = function() {
     const code = `
     <FormGroup>
         <FormLabel htmlFor="form.textInput">Text Input<span className="text-danger">*</span></FormLabel>
-        <FormControl controlId="form.textInput" type="text" placeholder="Write Your Name" required></FormControl>
+        <FormControl id="form.textInput" type="text" placeholder="Write Your Name" required></FormControl>
     </FormGroup>
     `;
     return (
@@ -13,7 +13,7 @@ const TextInput = function() {
             <ElementCard name="Text Input">
                 <FormGroup>
                     <FormLabel htmlFor="form.textInput">Text Input<span className="text-danger">*</span></FormLabel>
-                    <FormControl controlId="form.textInput" type="text" placeholder="Write Your Name" required></FormControl>
+                    <FormControl id="form.textInput" type="text" placeholder="Write Your Name" required></FormControl>
                 </FormGroup>
             </ElementCard>
             <ElementCode code={code}></ElementCode>

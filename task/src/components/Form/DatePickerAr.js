@@ -6,11 +6,12 @@ import hijri from "react-date-object/calendars/arabic";
 import arabic from "react-date-object/locales/arabic_ar";
 const DatePickerArInput = function () {
   const code = `
-  <FormLabel>
+  <FormLabel htmlFor="form.datePickerAr">>
   Date Input<span className="text-danger">*</span>
   </FormLabel>
   <InputGroup>
     <DatePicker
+      id="form.datePickerAr"
       type="date"
       calendar={hijri}
       locale={arabic}
@@ -23,11 +24,12 @@ const DatePickerArInput = function () {
   return (
     <>
       <ElementCard name="Select Input">
-        <FormLabel>
+        <FormLabel htmlFor="form.datePickerAr">
           Date Input<span className="text-danger">*</span>
         </FormLabel>
         <InputGroup>
           <DatePicker
+            id="form.datePickerAr"
             type="date"
             calendar={hijri}
             locale={arabic}

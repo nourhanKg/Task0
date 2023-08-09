@@ -5,7 +5,7 @@ const FileUploadInput = function() {
     const code = `
     <FormGroup>
         <FormLabel htmlFor="form.fileUploadInput">FileUpload Input<span className="text-danger">*</span></FormLabel>
-        <FormControl controlId="form.fileUploadInput" type="file" placeholder="Upload" required multiple></FormControl>
+        <FormControl id="form.fileUploadInput" type="file" placeholder="Upload" required multiple></FormControl>
     </FormGroup>
     `;
     return (
@@ -13,7 +13,7 @@ const FileUploadInput = function() {
             <ElementCard name="FileUpload Input">
                 <FormGroup>
                     <FormLabel htmlFor="form.fileUploadInput">FileUpload Input<span className="text-danger">*</span></FormLabel>
-                    <FormControl controlId="form.fileUploadInput" type="file" placeholder="Upload" required multiple></FormControl>
+                    <FormControl id="form.fileUploadInput" type="file" placeholder="Upload" required multiple></FormControl>
                 </FormGroup>
             </ElementCard>
             <ElementCode code={code}></ElementCode>

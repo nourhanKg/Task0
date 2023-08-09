@@ -5,7 +5,7 @@ const NumericInput = function() {
     const code = `
     <FormGroup>
         <FormLabel htmlFor="form.numericInput">Numeric Input<span className="text-danger">*</span></FormLabel>
-        <FormControl controlId="form.numericInput" type="number" placeholder="10" step="10" min="0" max="100" required></FormControl>
+        <FormControl id="form.numericInput" type="number" placeholder="10" step="10" min="0" max="100" required></FormControl>
     </FormGroup>
     `;
     return (
@@ -13,7 +13,7 @@ const NumericInput = function() {
             <ElementCard name="Numeric Input">
                 <FormGroup>
                     <FormLabel htmlFor="form.numericInput">Numeric Input<span className="text-danger">*</span></FormLabel>
-                    <FormControl controlId="form.numericInput" type="number" placeholder="10" step="10" min="0" max="100" required></FormControl>
+                    <FormControl id="form.numericInput" type="number" placeholder="10" step="10" min="0" max="100" required></FormControl>
                 </FormGroup>
             </ElementCard>
             <ElementCode code={code}></ElementCode>

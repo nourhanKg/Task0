@@ -14,18 +14,18 @@ import DatePickerArInput from "../Form/DatePickerAr";
 const FormElements = function() {
     return (
         <Container>
-            <CurrencyInput/>
-            <NumericInput/>
             <TextInput/>
             <PasswordInput/>
+            <NumericInput/>
             <TextareaInput/>
-            <ValidatingInput/>
             <FileUploadInput/>
+            <CurrencyInput/>
             <SelectInput/>
             <CheckboxInput/>
             <RadioButtonInput/>
             <DatePickerEnInput/>
             <DatePickerArInput/>
+            <ValidatingInput/>
         </Container>
     )
 }

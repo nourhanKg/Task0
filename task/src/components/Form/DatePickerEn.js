@@ -1,22 +1,23 @@
 import ElementCard from "../layout/ElementCard";
 import ElementCode from "../layout/ElementCode";
 import { FormLabel, InputGroup, FormControl } from "react-bootstrap";
-import DatePicker from "react-multi-date-picker";
 const DatePickerEnInput = function () {
   const code = `
-    <FormGroup>
-        <FormLabel htmlFor="form.fileUploadInput">FileUpload Input<span className="text-danger">*</span></FormLabel>
-        <FormControl controlId="form.fileUploadInput" type="file" placeholder="Upload" required multiple></FormControl>
-    </FormGroup>
+  <FormLabel htmlFor="form.datePickerEn">
+    Date Input <span className="text-danger">*</span>
+  </FormLabel>
+  <InputGroup>
+    <FormControl id="datePickerEn" type="date" />
+  </InputGroup>
     `;
   return (
     <>
       <ElementCard name="Select Input">
-        <FormLabel>
+        <FormLabel htmlFor="form.datePickerEn">
           Date Input <span className="text-danger">*</span>
         </FormLabel>
         <InputGroup>
-          <FormControl type="date" />
+          <FormControl id="datePickerEn" type="date" />
         </InputGroup>
       </ElementCard>
       <ElementCode code={code}></ElementCode>
