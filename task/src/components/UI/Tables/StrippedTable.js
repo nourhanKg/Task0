@@ -18,7 +18,7 @@ const StrippedTable = function () {
       <td>Name 1</td>
       <td>Age 1</td>
       <td>
-        <i class="bi bi-trash3-fill"></i>
+        <i className="bi bi-trash3-fill"></i>
       </td>
     </tr>
     <tr>
@@ -26,7 +26,7 @@ const StrippedTable = function () {
       <td>Name 2</td>
       <td>Age 2</td>
       <td>
-        <i class="bi bi-trash3-fill"></i>
+        <i className="bi bi-trash3-fill"></i>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ const StrippedTable = function () {
       <td>Name 3</td>
       <td>Age 3</td>
       <td>
-        <i class="bi bi-trash3-fill"></i>
+        <i className="bi bi-trash3-fill"></i>
       </td>
     </tr>
   </tbody>
@@ -54,7 +54,7 @@ const StrippedTable = function () {
       <td>Name 1</td>
       <td>Age 1</td>
       <td>
-        <i class="bi bi-trash3-fill"></i>
+        <i className="bi bi-trash3-fill"></i>
       </td>
     </tr>
     <tr>
@@ -62,7 +62,7 @@ const StrippedTable = function () {
       <td>Name 2</td>
       <td>Age 2</td>
       <td>
-        <i class="bi bi-trash3-fill"></i>
+        <i className="bi bi-trash3-fill"></i>
       </td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ const StrippedTable = function () {
       <td>Name 3</td>
       <td>Age 3</td>
       <td>
-        <i class="bi bi-trash3-fill"></i>
+        <i className="bi bi-trash3-fill"></i>
       </td>
     </tr>
   </tbody>
@@ -95,7 +95,7 @@ const StrippedTable = function () {
               <td>Name 1</td>
               <td>Age 1</td>
               <td>
-                <i class="bi bi-trash3-fill"></i>
+                <i className="bi bi-trash3-fill"></i>
               </td>
             </tr>
             <tr>
@@ -103,7 +103,7 @@ const StrippedTable = function () {
               <td>Name 2</td>
               <td>Age 2</td>
               <td>
-                <i class="bi bi-trash3-fill"></i>
+                <i className="bi bi-trash3-fill"></i>
               </td>
             </tr>
             <tr>
@@ -111,7 +111,7 @@ const StrippedTable = function () {
               <td>Name 3</td>
               <td>Age 3</td>
               <td>
-                <i class="bi bi-trash3-fill"></i>
+                <i className="bi bi-trash3-fill"></i>
               </td>
             </tr>
           </tbody>
@@ -132,7 +132,7 @@ const StrippedTable = function () {
               <td>Name 1</td>
               <td>Age 1</td>
               <td>
-                <i class="bi bi-trash3-fill"></i>
+                <i className="bi bi-trash3-fill"></i>
               </td>
             </tr>
             <tr>
@@ -140,7 +140,7 @@ const StrippedTable = function () {
               <td>Name 2</td>
               <td>Age 2</td>
               <td>
-                <i class="bi bi-trash3-fill"></i>
+                <i className="bi bi-trash3-fill"></i>
               </td>
             </tr>
             <tr>
@@ -148,7 +148,7 @@ const StrippedTable = function () {
               <td>Name 3</td>
               <td>Age 3</td>
               <td>
-                <i class="bi bi-trash3-fill"></i>
+                <i className="bi bi-trash3-fill"></i>
               </td>
             </tr>
           </tbody>
