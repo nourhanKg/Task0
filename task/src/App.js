@@ -11,7 +11,7 @@ function App() {
       <Header></Header>
       <NavigatinBar></NavigatinBar>
       <Routes>
-        <Route path='/formElements' element={<FormElements/>}>
+        <Route path='/' element={<FormElements/>}>
         </Route>
         <Route path='/UIElements' element={<UIElements/>}>
         </Route>
