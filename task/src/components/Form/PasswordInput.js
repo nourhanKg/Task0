@@ -2,6 +2,7 @@ import ElementCard from "../layout/ElementCard";
 import ElementCode from "../layout/ElementCode";
 import {FormLabel, FormGroup } from "react-bootstrap";
 import PasswordStrength from 'react-password-strength';
+import classes from "./PasswordInput.module.css";
 const PasswordInput = function() {
     const handlePasswordChange = function() {
     }
@@ -30,7 +31,7 @@ const PasswordInput = function() {
                     <FormLabel htmlFor="form.passwordInput">Password Input<span className="text-danger">*</span></FormLabel>
                     <PasswordStrength
                         id="form.passwordInput"
-                        className="form-control"
+                        className={`form-control ${classes.ReactPasswordStrength}`}
                         name="password"
                         minLength={8}
                         minScore={2}
