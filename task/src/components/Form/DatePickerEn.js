@@ -12,7 +12,7 @@ const DatePickerEnInput = function () {
     `;
   return (
     <>
-      <ElementCard name="Select Input">
+      <ElementCard name="Date Picker En">
         <FormLabel htmlFor="form.datePickerEn">
           Date Input <span className="text-danger">*</span>
         </FormLabel>

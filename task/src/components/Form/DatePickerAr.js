@@ -5,6 +5,9 @@ import DatePicker from "react-multi-date-picker";
 import hijri from "react-date-object/calendars/arabic";
 import arabic from "react-date-object/locales/arabic_ar";
 const DatePickerArInput = function () {
+  const installCode = `npm i react-multi-date-picker`;
+  const importCode = `import hijri from "react-date-object/calendars/arabic";
+import arabic from "react-date-object/locales/arabic_ar";`;
   const code = `
   <FormLabel htmlFor="form.datePickerAr">>
   Date Input<span className="text-danger">*</span>
@@ -23,7 +26,7 @@ const DatePickerArInput = function () {
     `;
   return (
     <>
-      <ElementCard name="Select Input">
+      <ElementCard name="Date Picker Ar">
         <FormLabel htmlFor="form.datePickerAr">
           Date Input<span className="text-danger">*</span>
         </FormLabel>
@@ -39,6 +42,8 @@ const DatePickerArInput = function () {
           />
         </InputGroup>
       </ElementCard>
+      <ElementCode code={installCode}></ElementCode>
+      <ElementCode code={importCode}></ElementCode>
       <ElementCode code={code}></ElementCode>
     </>
   );
