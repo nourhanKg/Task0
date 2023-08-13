@@ -9,7 +9,8 @@ function NavigatinBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className='nav-link' to='/' activeclassname="active">Form Elements</NavLink>
+            <NavLink className='nav-link' to='/' activeclassname="active">Dependancies</NavLink>
+            <NavLink className='nav-link' to='/formElements' activeclassname="active">Form Elements</NavLink>
             <NavLink className='nav-link' to='/UIElements' activeclassname="active">UI Elements</NavLink>
             <NavLink className='nav-link' to='typographyElements' activeclassname="active">Typography Elements</NavLink>
           </Nav>

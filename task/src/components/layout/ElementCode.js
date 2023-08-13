@@ -5,7 +5,7 @@ const ElementCode = function (props) {
     alert("Code copied")
   };
   return (
-    <Row className="my-4 shadow-lg bg-dark text-light">
+    <div className="my-4 shadow-lg bg-dark text-light">
       <Col className="p-3 position-relative">
         <pre>
           <code>{props.code}</code>
@@ -17,7 +17,7 @@ const ElementCode = function (props) {
           <i className="bi bi-clipboard"></i>
         </button>
       </Col>
-    </Row>
+    </div>
   );
 };
 export default ElementCode;
