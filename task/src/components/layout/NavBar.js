@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 function NavigatinBar() {
   return (
     <Navbar expand="lg" data-bs-theme="dark" className='py-0'>
