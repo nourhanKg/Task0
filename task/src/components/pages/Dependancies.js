@@ -18,8 +18,8 @@ npm i react-bootstrap-icons
 //At the top of you index.js file import this
 import 'bootstrap-icons/font/bootstrap-icons.css';
     `;
-    const installPassCode = `npm i react-password-strength`;
-    const importPassCode = `import PasswordStrength from 'react-password-strength';`;
+    const installPassCode = `npm i react-password-strength-bar`;
+    const importPassCode = `import PasswordStrengthBar from 'react-password-strength-bar';`;
     const installSelectCode = `npm i multiselect-react-dropdown`;
     const importSelectCode = `import { Multiselect } from "multiselect-react-dropdown"`;
     const installHijriCode = `npm i react-multi-date-picker`;

@@ -1,26 +1,25 @@
 import ElementCard from "../layout/ElementCard";
 import ElementCode from "../layout/ElementCode";
-import {FormLabel, FormGroup } from "react-bootstrap";
-import PasswordStrength from 'react-password-strength';
-import classes from "./PasswordInput.module.css";
+import {FormLabel, FormGroup, FormControl } from "react-bootstrap";
+import { useState } from "react";
+import PasswordStrengthBar from 'react-password-strength-bar';
 const PasswordInput = function() {
-    const handlePasswordChange = function() {
+    const [password, setPassword] = useState("");
+    const handlePasswordChange = function(e) {
+        const newPass = e.target.value;
+        setPassword(newPass);
     }
-    const installCode = `npm i react-password-strength`;
-    const importCode = `import PasswordStrength from 'react-password-strength';`;
+    const installCode = `npm i react-password-strength-bar`;
+    const importCode = `import PasswordStrengthBar from 'react-password-strength-bar';`;
     const code = `
-<FormGroup>
+    <FormGroup>
     <FormLabel htmlFor="form.passwordInput">Password Input<span className="text-danger">*</span></FormLabel>
-    <PasswordStrength
-        id="form.passwordInput"
-        className="form-control"
-        name="password"
+    <FormControl id="form.passwordInput" type="password" onChange={handlePasswordChange}></FormControl>
+    <PasswordStrengthBar 
+        password={password}
         minLength={8}
         minScore={2}
         scoreWords={['Weak', 'Okay', 'Good', 'Strong', 'Very Strong']}
-        changeCallback={handlePasswordChange}
-        placeholder="Enter a password"
-        value={password}
     />
 </FormGroup>
     `;
@@ -29,16 +28,12 @@ const PasswordInput = function() {
             <ElementCard name="Password Input">
                 <FormGroup>
                     <FormLabel htmlFor="form.passwordInput">Password Input<span className="text-danger">*</span></FormLabel>
-                    <PasswordStrength
-                        id="form.passwordInput"
-                        className={`form-control ${classes.ReactPasswordStrength}`}
-                        name="password"
+                    <FormControl id="form.passwordInput" type="password" onChange={handlePasswordChange}></FormControl>
+                    <PasswordStrengthBar 
+                        password={password}
                         minLength={8}
                         minScore={2}
                         scoreWords={['Weak', 'Okay', 'Good', 'Strong', 'Very Strong']}
-                        changeCallback={handlePasswordChange}
-                        placeholder="Enter a password"
-                        value=""
                     />
                 </FormGroup>
             </ElementCard>
